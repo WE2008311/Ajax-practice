@@ -34,11 +34,11 @@
             }
         }
 
-        var xmr = createXHR();
+        var xhr = createXHR();
 
         //   但是在IE7+，chrome，Firefox，opera，safari都支持原生的XHR对象，所以我们只需要
         //   用XMLHttpRequest构造函数
-        var xmr = new XMLHttpRequest();
+        var xhr = new XMLHttpRequest();
 
         xhr.open("get", "example.php", false);
         // 参数分别为：请求方式，请求地址，是否异步。
@@ -52,6 +52,14 @@
         // status;
         // statusText;
         // 在接收到响应后，第一步是检查status属性；
+        if((xhr.status>=200 && xhr.status<300)||xhr.status==304){
+            alert(xhr.requestText);
+        }else{
+            alert("Request was unsuccessful"+xhr.status);
+        }
+
+        // XHR对象的readyState属性:0\1\2\3\4
+
     </script>
 </body>
 
