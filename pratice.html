@@ -20,7 +20,7 @@
                     var version = ["MSXML2.XMLHttp.6.0", "MSXML2.XMLHttp.3.0", "MSXML2.XMLHttp"], i, len;
                     for (i = 0, len = version.length; i < len; i++) {
                         try {
-                            new ActiveXObject(versiob[i]);
+                            new ActiveXObject(version[i]);
                             arguments.callee.activeXString = version[i];
                             break;
                         } catch (ex) {
@@ -59,6 +59,10 @@
         }
 
         // XHR对象的readyState属性:0\1\2\3\4
+
+
+        // 小结:在执行ajax的时候，我们先要判断是否是ie，用是否支持XMLHttpRequest来；
+        
 
     </script>
 </body>
