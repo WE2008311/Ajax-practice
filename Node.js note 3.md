@@ -26,7 +26,7 @@ fs模块是Node.js的内置模块，是负责处理读写文件的。它同时�
 $.getJSON('http://example.com/ajax',function(data){
   console.log('IO结果返回后执行……');
 });
-console.log('不等待IO结果直接执行后续代码‘）；
+console.log('不等待IO结果直接执行后续代码'）；
 ```
 
 而同步则是线形的，需要等待IO操作返回结果后，再执行后续代码：
@@ -37,7 +37,7 @@ console.log('不等待IO结果直接执行后续代码‘）；
 ### 异步读文件
 以下是一个异步读取文本文件的实例：
 ```js
-‘use strict';
+'use strict';
 
 var fs=require('fs');
 
