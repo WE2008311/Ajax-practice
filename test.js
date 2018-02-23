@@ -13,7 +13,7 @@ console.log('nextTick was set!');
 
 
 
-‘use strict';
+'use strict';
 
 var fs=require('fs');
 
